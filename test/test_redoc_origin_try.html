@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{title}</title>
+    <!-- needed for adaptive design -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700|JetBrains Mono:300,400,500,700"
+      rel="stylesheet"
+    />
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=JetBrains Mono:300,400,500,700"
+      rel="stylesheet"
+    /> -->
+    <link rel="shortcut icon" href="" />
+    <!--
+        ReDoc doesn't change outer page styles
+        -->
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      code,
+      .swagger-ui .opblock .opblock-summary-operation-id,
+      .swagger-ui .opblock .opblock-summary-path,
+      .swagger-ui .opblock .opblock-summary-path__deprecated,
+      .swagger-ui .parameter__type,
+      .swagger-ui .parameter__extension,
+      .swagger-ui .parameter__in,
+      .swagger-ui textarea {
+        font-family: JetBrains Mono, monospace !important;
+      }
+      .swagger-ui .opblock .opblock-summary-description,
+      .swagger-ui,
+      .swagger-ui .parameters-col_description {
+        font-family: Roboto, sans-serif !important;
+      }
+      .swagger-ui .opblock {
+        border-width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="redoc-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/redoc@2.0.0-rc.55/bundles/redoc.standalone.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wll8/redoc-try@1.4.1/dist/try.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      code,
+      .swagger-ui .opblock .opblock-summary-operation-id,
+      .swagger-ui .opblock .opblock-summary-path,
+      .swagger-ui .opblock .opblock-summary-path__deprecated,
+      .swagger-ui .parameter__type,
+      .swagger-ui .parameter__extension,
+      .swagger-ui .parameter__in,
+      .swagger-ui .parameter__deprecated,
+      .swagger-ui .opblock-body pre.microlight,
+      .swagger-ui .response-col_status .response-undocumented,
+      .swagger-ui textarea {
+        font-family: JetBrains Mono, monospace;
+      }
+      .swagger-ui .opblock .opblock-summary-description,
+      .swagger-ui .response-col_description,
+      .swagger-ui,
+      .swagger-ui .btn,
+      .swagger-ui .parameters-col_description,
+      .swagger-ui .response-col_status,
+      .swagger-ui .parameter__name,
+      .swagger-ui .download-contents,
+      .swagger-ui .opblock-description-wrapper p,
+      .swagger-ui .opblock-external-docs-wrapper p,
+      .swagger-ui .opblock-title_normal p,
+      .swagger-ui .responses-inner h4,
+      .swagger-ui .responses-inner h5 {
+        font-family: Roboto, sans-serif;
+      }
+      .swagger-ui .opblock .opblock-summary-method {
+        font-family: Montserrat, sans-serif;
+      }
+      .swagger-ui .opblock {
+        border-width: 0;
+      }
+      .swagger-ui textarea {
+        /* background: #11171a; */
+        background: #333333;
+        color: white;
+      }
+      .swagger-ui .download-contents {
+        height: fit-content;
+      }
+      .tryBtn {
+        font-size: 0.929em;
+        line-height: 20px;
+        background-color: #263238;
+        color: rgb(255, 255, 255);
+        padding: 3px 10px;
+        text-transform: uppercase;
+        font-family: Montserrat, sans-serif;
+        margin: 0px;
+        border: 0;
+      }
+      ul.react-tabs__tab-list > li.react-tabs__tab.react-tabs__tab--selected,
+      ul.react-tabs__tab-list > li.react-tabs__tab--selected {
+        background: rgb(17, 23, 26);
+      }
+      ul.react-tabs__tab-list > li.react-tabs__tab.react-tabs__tab--selected {
+        color: white;
+      }
+      ul.react-tabs__tab-list > li {
+        background-color: rgb(25, 34, 38);
+        border: 1px solid transparent;
+      }
+    </style>
+    <script>
+      initTry({
+        openApi: `https://redocly.github.io/redoc/openapi.yaml`,
+        // Ref: https://redocly.com/docs/api-reference-docs/configuration/theming/
+        redocOptions: {
+          //   licenseKey: "<license-key.here>",
+          pagination: "section",
+          generateCodeSamples: {
+            languages: [
+              { lang: "curl" },
+              { lang: "Node.js" },
+              { lang: "JavaScript", label: "JS" },
+            ],
+            skipOptionalParameters: true,
+          },
+          theme: {
+            colors: {
+              primary: {
+                main: "#6EC5AB",
+              },
+            },
+            typography: {
+              //   fontFamily: `"museo-sans", 'Helvetica Neue', Helvetica, Arial, sans-serif`,
+              fontSize: "14px",
+              lineHeight: "1.2",
+              code: {
+                fontFamily: `JetBrains Mono, monospace`,
+                // code: "#87E8C7",
+                // backgroundColor: "#4D4D4E",
+              },
+            },
+            menu: {
+              //   backgroundColor: "#E2E8F0",
+              backgroundColor: "#F1F5F9",
+            },
+          },
+          hooks: {},
+        },
+      });
+    </script>
+  </body>
+</html>
