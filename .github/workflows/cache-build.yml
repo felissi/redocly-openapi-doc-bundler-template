@@ -12,6 +12,7 @@ jobs:
         uses: actions/checkout@v4
       - name: chache npm module
         uses: actions/cache@v3
+        id: cache-npm
         env:
          cache-name: cache-node-modules
         with:
