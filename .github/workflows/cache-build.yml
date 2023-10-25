@@ -3,7 +3,7 @@ name: example to cache and build npm package
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
